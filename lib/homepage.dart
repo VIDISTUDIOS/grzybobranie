@@ -9,56 +9,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
 appBar: AppBar(
-  backgroundColor: Color.fromARGB(255, 33, 31, 31),
+  backgroundColor: Colors.transparent,
+  elevation: 0,
     centerTitle: true, 
     title: const Text('Grzybobranie'),
   ),
-  drawer: Drawer(
-    //backgroundColor: Color.fromARGB(255, 33, 31, 31),
-    child: ListView(
-      
-      padding: EdgeInsets.zero,
-      children: const <Widget>[
-        DrawerHeader(
-          
-          decoration: BoxDecoration(
-            color: Color.fromARGB(255, 33, 31, 31),
-          ),
-          child: Text(
-            'Opcje',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-            ),
-          ),
-        ),
-        ListTile(
-          leading: Icon(Icons.message),
-          title: Text('Atlas grzybów'),
-        ),
-        ListTile(
-          leading: Icon(Icons.add_location),
-          title: Text('Mapa'),
-        ),
-        ListTile(
-          leading: Icon(Icons.photo_album),
-          title: Text('Galeria'),
-        ),
-        ListTile(
-          leading: Icon(Icons.photo_camera),
-          title: Text('Aparat'),
-        ),
-        ListTile(
-          leading: Icon(Icons.settings),
-          title: Text('Settings'),
-        ),
-      ],
-    ),
-  ),
+  drawer: NavBar(),
       
       backgroundColor: Color.fromARGB(255, 33, 31, 31),
-       
-  
         body:Column(children: [
           
           Padding(padding: const EdgeInsets.all(80.0),

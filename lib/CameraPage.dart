@@ -49,8 +49,8 @@ class _CameraPageState extends State<CameraPage> {
           padding: const EdgeInsets.all(8.0),
           child: Center(
             child: SizedBox(
-              height: 400,
-              width: 400,
+              height: 700,
+              width: 600,
               child: CameraPreview(controller),
             ),
           ),
@@ -69,9 +69,9 @@ class _CameraPageState extends State<CameraPage> {
           Image.network(
             pictureFile!.path,
             height: 400,
-          )
+          ),
           //Android/iOS
-          // Image.file(File(pictureFile!.path)))
+           //Image.file(File(pictureFile!.path))),
       ],
     );
   }
