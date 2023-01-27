@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:grzybobranie/gallery.dart';
 import 'atlas.dart';
-import 'compassPage.dart';
-import 'CameraPage.dart';
-import 'MapScreen.dart';
-import 'SettingsScreen.dart';
+import 'compass_page.dart';
+import 'camera_page.dart';
+import 'map_screen.dart';
+import 'settings_screen.dart';
 import 'homepage.dart';
-import 'culinaryRecipe.dart';
+import 'culinary_recipe.dart';
 import 'package:camera/camera.dart';
 
 
 class NavBar extends StatelessWidget {
+  const NavBar({super.key});
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -22,45 +23,45 @@ class NavBar extends StatelessWidget {
       children:  <Widget>[
 
         ListTile(
-          leading: Icon(Icons.home),
-          title: Text('Home'),
+          leading: const Icon(Icons.home),
+          title: const Text('Home'),
           onTap: () {
             Navigator.push(context,
-              MaterialPageRoute(builder: (context) => HomePage()),
+              MaterialPageRoute(builder: (context) => const HomePage()),
             );
           },
         ),
 
         ListTile(
-          leading: Icon(Icons.message),
-          title: Text('Atlas grzybów'),
+          leading: const Icon(Icons.message),
+          title: const Text('Atlas grzybów'),
           onTap: () {
             Navigator.push(context,
-              MaterialPageRoute(builder: (context) => MushroomAtlas()),
+              MaterialPageRoute(builder: (context) => const MushroomAtlas()),
             );
           },
         ),
         ListTile(
-          leading: Icon(Icons.message),
-          title: Text('Przepisy'),
+          leading: const Icon(Icons.message),
+          title:  const Text('Przepisy'),
           onTap: () {
             Navigator.push(context,
-              MaterialPageRoute(builder: (context) => CulinaryRecipes()),
+              MaterialPageRoute(builder: (context) => const CulinaryRecipes()),
             );
           },
         ),
         ListTile(
-          leading: Icon(Icons.add_location),
-          title: Text('Mapa'),
+          leading: const Icon(Icons.add_location),
+          title: const Text('Mapa'),
           onTap: () {
             Navigator.push(context,
-              MaterialPageRoute(builder: (context) => MapPage()),
+              MaterialPageRoute(builder: (context) => const MapPage()),
            );
           },
         ),
         ListTile(
-          leading: Icon(Icons.photo_album),
-          title: Text('Galeria'),
+          leading: const Icon(Icons.photo_album),
+          title: const Text('Galeria'),
           onTap: () {
             Navigator.push(context,
               MaterialPageRoute(builder: (context) => RouteOne()),
@@ -68,8 +69,8 @@ class NavBar extends StatelessWidget {
           },
         ),
         ListTile(
-          leading: Icon(Icons.photo_camera),
-          title: Text('Aparat'),
+          leading:const Icon(Icons.photo_camera),
+          title:const Text('Aparat'),
           onTap: () async {
             await availableCameras().then((value) => Navigator.push(context,
                 MaterialPageRoute(builder: (_) => CameraPage(cameras: value))));
@@ -77,21 +78,21 @@ class NavBar extends StatelessWidget {
         ),
 
         ListTile(
-          leading: Icon(Icons.compass_calibration_sharp),
-          title: Text('Kompas'),
+          leading:const Icon(Icons.compass_calibration_sharp),
+          title:const Text('Kompas'),
           onTap: () {
             Navigator.push(context,
-              MaterialPageRoute(builder: (context) => compassPage()),
+              MaterialPageRoute(builder: (context) =>const CompassPage()),
             );
           },
         ),
 
         ListTile(
-          leading: Icon(Icons.settings),
-          title: Text('Ustawienia'),
+          leading:const Icon(Icons.settings),
+          title:const Text('Ustawienia'),
           onTap: () {
             Navigator.push(context,
-              MaterialPageRoute(builder: (context) => SettingsScreen()),
+              MaterialPageRoute(builder: (context) =>const SettingsScreen()),
             );
           },
         ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'NavBar.dart';
+import 'nav_bar.dart';
 class PhotoItem {
   final String image;
   final String name;
@@ -67,18 +67,18 @@ class RouteOne extends StatelessWidget {
     centerTitle: true, 
     title: const Text('Galeria'),
   ),
-  drawer: NavBar(),
-  backgroundColor: Color.fromARGB(255, 33, 31, 31),
+  drawer:const NavBar(),
+  backgroundColor:const Color.fromARGB(255, 33, 31, 31),
       body: GridView.builder(
 
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisSpacing: 0,
           mainAxisSpacing: 0,
           crossAxisCount: 3,
         ),
         itemCount: _items.length,
         itemBuilder: (context, index) {
-          return new GestureDetector(
+          return  GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
@@ -89,9 +89,9 @@ class RouteOne extends StatelessWidget {
               );
             },
             child: Container(
-              margin: EdgeInsets.all(8),
+              margin: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(20)),
+                borderRadius: const BorderRadius.all(Radius.circular(20)),
                 image: DecorationImage(
                   fit: BoxFit.cover,
                   image: NetworkImage(_items[index].image),
@@ -109,18 +109,18 @@ class RouteTwo extends StatelessWidget {
   final String image;
 
 
-  RouteTwo({Key? key, required this.image})
+  const RouteTwo({Key? key, required this.image})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 33, 31, 31),
+        backgroundColor:const Color.fromARGB(255, 33, 31, 31),
        elevation: 0,
        centerTitle: true, 
       ),
-       backgroundColor: Color.fromARGB(255, 33, 31, 31),
+       backgroundColor: const Color.fromARGB(255, 33, 31, 31),
       body: Column(
         children: [
           AspectRatio(

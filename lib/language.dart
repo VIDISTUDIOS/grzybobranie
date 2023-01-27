@@ -13,14 +13,14 @@ class DropdownButtonApp extends StatelessWidget {
   elevation: 0,
     centerTitle: true, 
   ),
-        backgroundColor: Color.fromARGB(255, 33, 31, 31),
+        backgroundColor: const Color.fromARGB(255, 33, 31, 31),
         body: Center(
 
-          child:Column(children: [
+          child:Column(children: const[
 SizedBox(height: 20),
         Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: const Text(
+            padding:  EdgeInsets.all(20.0),
+            child:  Text(
               "Język",
               textAlign: TextAlign.center,
               style:TextStyle(
@@ -64,7 +64,7 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
       style: const TextStyle(color: Color.fromARGB(255, 162, 22, 80)),
       underline: Container(
         height: 2,
-        color: Color.fromARGB(255, 162, 22, 80),
+        color: const Color.fromARGB(255, 162, 22, 80),
       ),
       onChanged: (String? value) {
         // This is called when the user selects an item.

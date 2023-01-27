@@ -10,14 +10,14 @@ class ApplicationTheme extends StatelessWidget {
   backgroundColor: Colors.transparent,
   elevation: 0,
      ),
-        backgroundColor: Color.fromARGB(255, 33, 31, 31),
+        backgroundColor:const Color.fromARGB(255, 33, 31, 31),
         body: Center(
 
-          child:Column(children: [
+          child:Column(children:const [
 SizedBox(height: 20),
         Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: const Text(
+            padding:  EdgeInsets.all(20.0),
+            child: Text(
               "Motyw",
               textAlign: TextAlign.center,
               style:TextStyle(
@@ -36,7 +36,7 @@ SizedBox(height: 20),
                 fontWeight: FontWeight.bold,
               ),
             ),
-          SizedBox(
+         SizedBox(
       height: 70,
       width: 300,
     child:ApplicationThemeExample(),

@@ -1,10 +1,11 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'model/mushroom.dart';
-import 'NavBar.dart';
-import 'mPagedesc.dart';
+import 'nav_bar.dart';
+import 'map_desc.dart';
 
 class MushroomAtlas extends StatefulWidget{
+  const MushroomAtlas({super.key});
   @override
   State<MushroomAtlas> createState() => MushroomAtlasState();
  
@@ -27,12 +28,12 @@ late Future<List<Mushroom>> mushroomFuture;
        itemBuilder: (context, index){
         final mushroom = mushrooms[index];
         return Card(
-          color: Color.fromARGB(255, 33, 31, 31),
+          color: const Color.fromARGB(255, 33, 31, 31),
           
           child: ListTile(
           
             leading: ClipRRect(
-              borderRadius: BorderRadius.all(Radius.circular(5.0)),//add border radius here
+              borderRadius: const BorderRadius.all(Radius.circular(5.0)),//add border radius here
              child:  Image.network(mushroom.picture,
              height: 300,
              width: 80,
@@ -40,7 +41,7 @@ late Future<List<Mushroom>> mushroomFuture;
 
             ),
             title: Text(
-              style:TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 20,
               ),
@@ -70,8 +71,8 @@ appBar: AppBar(
     centerTitle: true, 
     title: const Text('Grzybobranie'),
   ),
-  drawer: NavBar(),
-  backgroundColor: Color.fromARGB(255, 33, 31, 31),
+  drawer:const NavBar(),
+  backgroundColor: const Color.fromARGB(255, 33, 31, 31),
   body: Center(
     child: FutureBuilder<List<Mushroom>>(
      future: mushroomFuture,

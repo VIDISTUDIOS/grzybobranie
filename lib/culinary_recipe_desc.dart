@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'model/mushroom.dart';
-import 'NavBar.dart';
+import 'model/recipes.dart';
 
-class MPageDescription extends StatelessWidget  {
-  final Mushroom mushroom;
 
-  const MPageDescription ({
+class CRpagedesc extends StatelessWidget  {
+  final Recipe recipe;
+
+  const CRpagedesc ({
     Key? key,
-    required this.mushroom,
+    required this.recipe,
   }) : super(key: key);
   
   @override
@@ -16,22 +16,22 @@ appBar: AppBar(
   backgroundColor: Colors.transparent,
   elevation: 0,
     centerTitle: true, 
-    title: const Text('Opis grzyba'),
+    title: const Text('Opis potrawy'),
   ),
   //drawer: NavBar(),
-  backgroundColor: Color.fromARGB(255, 33, 31, 31),
+  backgroundColor: const Color.fromARGB(255, 33, 31, 31),
   body: SingleChildScrollView(
     child: Column(
       children: <Widget>[
         Image.network(
-          mushroom.picture,
+          recipe.picture,
           height: 400,
           width: double.infinity,
           fit: BoxFit.cover,
           ),
           const SizedBox(height: 16),
           Text(
-            mushroom.mushroomname,
+            recipe.recipename,
             style: const TextStyle(
               fontSize: 40,
               color: Colors.white,
@@ -40,7 +40,7 @@ appBar: AppBar(
           ),
 
           Text(
-            mushroom.description,
+            recipe.description,
             style: const TextStyle(
               color: Colors.white,
               fontSize: 20,

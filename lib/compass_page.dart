@@ -5,16 +5,16 @@ import 'package:flutter_compass/flutter_compass.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 
-class compassPage extends StatefulWidget {
-  const compassPage({
+class CompassPage extends StatefulWidget {
+  const CompassPage({
     Key? key,
   }) : super(key: key);
 
   @override
-  _compassPageState createState() => _compassPageState();
+  _CompassPageState createState() => _CompassPageState();
 }
 
-class _compassPageState extends State<compassPage> {
+class _CompassPageState extends State<CompassPage> {
   bool _hasPermissions = false;
 
   @override

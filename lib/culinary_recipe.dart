@@ -1,10 +1,11 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'model/recipes.dart';
-import 'NavBar.dart';
-import 'CRpagedesc.dart';
+import 'nav_bar.dart';
+import 'culinary_recipe_desc.dart';
 
 class CulinaryRecipes extends StatefulWidget{
+  const CulinaryRecipes({super.key});
   @override
   State<CulinaryRecipes> createState() => CulinaryRecipesState();
  
@@ -27,12 +28,12 @@ late Future<List<Recipe>> recipeFuture;
        itemBuilder: (context, index){
         final recipe = recipes[index];
         return Card(
-          color: Color.fromARGB(255, 33, 31, 31),
+          color: const Color.fromARGB(255, 33, 31, 31),
           
           child: ListTile(
           
             leading: ClipRRect(
-              borderRadius: BorderRadius.all(Radius.circular(5.0)),//add border radius here
+              borderRadius: const BorderRadius.all(Radius.circular(5.0)),//add border radius here
              child:  Image.network(recipe.picture,
              height: 300,
              width: 80,
@@ -40,7 +41,7 @@ late Future<List<Recipe>> recipeFuture;
 
             ),
             title: Text(
-              style:TextStyle(
+              style:const TextStyle(
                 color: Colors.white,
                 fontSize: 20,
               ),
@@ -71,7 +72,7 @@ appBar: AppBar(
     title: const Text('Grzybobranie'),
   ),
   drawer: NavBar(),
-  backgroundColor: Color.fromARGB(255, 33, 31, 31),
+  backgroundColor: const  Color.fromARGB(255, 33, 31, 31),
   body: Center(
     child: FutureBuilder<List<Recipe>>(
      future: recipeFuture,
